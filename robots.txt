@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://cpuranker.netlify.app/sitemap.xml

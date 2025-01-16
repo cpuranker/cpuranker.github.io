@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLCBBN41X4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VLCBBN41X4');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Ranker - Mobile CPU Database</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">	
+	<meta name="description" content="Mobile Processors 2025: Complete Ranking List. Managing devices in Google Play Console just got easier! Check out our Mobile CPU Database for all the data you need." />
+    <meta name="keywords" content="CPU, GPU, CPU Rating, Antutu Score, GPU, CPU table, Mobile CPU, Mobile GPU, Smartphone GPU, Smartphone GPU list, CPU ranking mobile, Mobile CPU Rank, Mobile SoC, Smartphones SoC, Mobile Processors, Smartphone Processors, Smartphones CPU, Smartphone CPU, Mobile CPU list, Smartphone CPU list, CPU filters, sorting CPU, download CPU data, CPURanker, CPU Ranker, CPU Benchmarks, CPU Benchmark, Smartphone Processors Ranking List" />
+	<meta name="author" content="Aleksandr Kolesnikov">
+	<meta property="og:title" content="Mobile CPU Ranking List" />
+    <meta property="og:description" content="Mobile Processors 2025: Complete Ranking List. Detailed CPU table with filters, sorting options, and CSV download functionality. Mobile CPU and GPU ranking list">
+    <meta property="og:type" content="website">
+	<meta property="og:site_name" content="CPU Ranker" />
+	<meta property="og:url" content="https://cpuranker.netlify.app" />
+	
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1 style="font-family: Arial, sans-serif;">Mobile Processors 2025: Complete Ranking List</h1>
+	<p>Qualcomm, MediaTek, Samsung and Google launch new mobile processors each year. In this database you could find all popular smartphone SoC with AnTuTu score.</p>
+	<p>Check out the <b>mobile processors ranking for 2025</b> below:</p>
+
+
+<table style="width: 100%; margin-bottom: 0px; border-collapse: collapse; border: none;">
+	<tr>
+    <!-- Dropdown filter for CPU Manufacturer -->
+<td style="width: 40%; text-align: left; padding: 0px 8px; border: none;">	
+<div class="dropdown">
+    <button>Filter by CPU</button>
+    <div class="dropdown-content">
+        <form id="cpu-filter-form">
+            <label><input type="checkbox" name="manufacturer" value="Qualcomm" checked> Qualcomm</label>
+            <label><input type="checkbox" name="manufacturer" value="MediaTek" checked> MediaTek</label>
+            <label><input type="checkbox" name="manufacturer" value="Samsung" checked> Samsung</label>
+			<label><input type="checkbox" name="manufacturer" value="Google" checked> Google</label>
+            <label><input type="checkbox" name="manufacturer" value="HiSilicon" checked> HiSilicon</label>
+            <label><input type="checkbox" name="manufacturer" value="Unisoc" checked> Unisoc</label>
+        </form>
+    </div>
+</div>
+
+<!-- Dropdown filter for GPU Manufacturer -->
+<div class="dropdown">
+    <button>Filter by GPU</button>
+    <div class="dropdown-content">
+        <form id="gpu-filter-form">
+            <label><input type="checkbox" name="gpu-manufacturer" value="Adreno" checked> Adreno</label>
+            <label><input type="checkbox" name="gpu-manufacturer" value="Mali" checked> Mali</label>
+			<label><input type="checkbox" name="gpu-manufacturer" value="Immortalis" checked> Immortalis</label>
+            <label><input type="checkbox" name="gpu-manufacturer" value="Xclipse" checked> Xclipse</label>
+            <label><input type="checkbox" name="gpu-manufacturer" value="PowerVR" checked> PowerVR</label>
+            <label><input type="checkbox" name="gpu-manufacturer" value="Maleoon" checked> Maleoon</label>
+        </form>
+    </div>
+</div>
+
+<!-- Clear Filters Button -->
+<button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
+</td>	
+
+</tr>
+
+<tr>
+<td style="width: 40%; text-align: left; padding: 0px 8px; border: none;">
+<!-- Search Field -->	
+<div style="margin-bottom: 0px; text-align: left;">
+    <input type="text" id="searchInput" placeholder="Search..." style="width: 250px; padding: 8px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+</div>
+</td>	
+
+
+<td style="width: 30%; text-align: right; padding: 0px 8px; border: none;">
+    <!-- Download button -->	
+    <button class="download-btn" onclick="downloadCSV()">Download CSV</button>
+</td>
+</tr>
+
+</table>
+
+    <div id="table-container">
+        <!-- Main table -->
+    </div>
+	
+    <div id="copyPopup">Text copied!</div>
+	
+	<footer style="margin-top: 20px; text-align: center; font-size: 14px; color: #555;">
+    <p>CPURanker &copy; 2025</p>
+    <p><a href="html/about.html" style="color: #007BFF; text-decoration: none;">About</a></p>
+</footer>
+
+<div id="copyPopup" style="display: none; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background-color: #28a745; color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; z-index: 1000;">Text copied!</div>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
