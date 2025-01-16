@@ -1,5 +1,5 @@
 // Load table
-fetch('../html/table.html')
+fetch('/html/table.html')
     .then(response => {
         if (!response.ok) {
             throw new Error('Failed to load table.');
