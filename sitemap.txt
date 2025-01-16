@@ -1,2 +1,2 @@
-https://cpuranker.netlify.app/
-https://cpuranker.netlify.app/about
+https://cpuranker.github.io/
+https://cpuranker.github.io/html/about.html
