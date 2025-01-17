@@ -25,33 +25,30 @@
 	<meta property="og:site_name" content="CPU Ranker :: About" />
 	<meta property="og:url" content="https://cpuranker.github.io/html/about.html" />
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
+	<link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
-<a href="/">Home</a> > about
-    <h1>About</h1>
+
+<header class="site-header">
+    <nav class="nav-bar">
+        <div class="nav-left">
+            <a href="/" class="nav-link">Home</a>| 
+            <a href="/html/about.html" class="nav-link">About</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="https://github.com/cpuranker/cpuranker.github.io" target="_blank" class="github-button">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon" />
+                View on GitHub
+            </a>
+        </div>
+    </nav>
+</header>
+
+
+<div class="about-page">
+    <h1 style="font-family: Arial, sans-serif;">About</h1>
     <p>
         CPURanker - the largest database of Android mobile CPUs, with specifications and Antutu ratings. 
         </br>Data is aggregated from the following websites:
@@ -60,14 +57,17 @@
 		<a href="https://www.qualcomm.com" target="_blank">qualcomm</a>,
 		<a href="https://www.mediatek.com" target="_blank">mediatek</a> and others.
     </p>
-    <h2>About me</h2>
+    <h1 style="font-family: Arial, sans-serif;">About me</h1>
     <p>
         I'm <a href="https://www.linkedin.com/in/askarter/" target="_blank">Aleksandr</a>, QA Lead in game development. 
         </br>This database was initially created to simplify device management in Google Play Console but eventually grew into a small pet project.
     </p>
+</div>
 	</br></br></br></br></br></br></br></br></br></br>
-    <footer>
-        <p>CPURanker &copy; 2025</p>
-    </footer>
+	
+	<footer style="margin-top: 20px; text-align: center; font-size: 14px; color: #555;">
+    <p>CPURanker &copy; 2025</p>
+	</footer>
+	
 </body>
 </html>
