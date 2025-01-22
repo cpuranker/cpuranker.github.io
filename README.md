@@ -32,8 +32,8 @@ What started as a Google Sheet has now evolved into a simple HTML/JS page where 
 - Some Model Numbers are marked as "Unknown." But this isn’t a big problem because those processors can still be found by their names in Google Play Console.
 
 ## Future plans:
-- Add a tab for GPU rankings (since device selection can also depend on GPU performance)
-- Add new download formats
-- Add filters for Rank and Antutu Score columns
-- Add additional benchmarks for better comparisons
-- Automate the process of fetching new CPUs and GPUs to keep the database up-to-date
+- [x] Add a tab for GPU rankings (since device selection can also depend on GPU performance)
+- [ ] Add new download formats
+- [ ] Add filters for Rank and Antutu Score columns
+- [ ] Add additional benchmarks for better comparisons
+- [ ] Automate the process of fetching new CPUs and GPUs to keep the database up-to-date
