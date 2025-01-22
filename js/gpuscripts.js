@@ -1,5 +1,5 @@
 // Load table
-fetch('/html/table.html')
+fetch('/html/gputable.html')
     .then(response => {
         if (!response.ok) {
             throw new Error('Failed to load table.');
@@ -18,61 +18,50 @@ fetch('/html/table.html')
 let sortDirection = {}; // Track sort direction for each column
 
 function preprocessNumericColumns() {
-    const rows = document.querySelectorAll('#cpuTable tbody tr');
+    const rows = document.querySelectorAll('#gpuTable tbody tr');
 
     rows.forEach(row => {
-        const rankCell = row.cells[4];
-        const antutuCell = row.cells[5];
+        const GFXScoreCell = row.cells[3];
 
         // Store original text in a data attribute for filtering
-        if (rankCell) {
-            rankCell.dataset.original = rankCell.textContent.trim();
-            rankCell.textContent = parseFloat(rankCell.textContent.trim()) || '';
-        }
-
-        if (antutuCell) {
-            antutuCell.dataset.original = antutuCell.textContent.trim();
-            antutuCell.textContent = parseFloat(antutuCell.textContent.trim().replace(/,/g, '')) || '';
+        if (GFXScoreCell) {
+            GFXScoreCell.dataset.original = GFXScoreCell.textContent.trim();
+            GFXScoreCell.textContent = parseFloat(GFXScoreCell.textContent.trim().replace(/,/g, '')) || '';
         }
     });
 }
 
 function applyFilters() {
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
-    const cpuCheckboxes = document.querySelectorAll('[name="manufacturer"]:checked');
-    const selectedCPUs = Array.from(cpuCheckboxes).map(cb => cb.value);
-
     const gpuCheckboxes = document.querySelectorAll('[name="gpu-manufacturer"]:checked');
     const selectedGPUs = Array.from(gpuCheckboxes).map(cb => cb.value);
 
-    const rows = document.querySelectorAll('#cpuTable tbody tr');
+    const rows = document.querySelectorAll('#gpuTable tbody tr');
     rows.forEach(row => {
         const cells = row.querySelectorAll('td');
-        const cpuManufacturer = cells[1]?.textContent.trim();
-        const gpuFullText = cells[6]?.textContent.trim() || 'Unknown';
+        const gpuFullText = cells[2]?.textContent.trim() || 'Unknown';
         const gpuManufacturer = gpuFullText.split(/[-\s]/)[0];
 
         // Check filters
-        const matchesCPU = selectedCPUs.includes(cpuManufacturer);
         const matchesGPU = selectedGPUs.includes(gpuManufacturer);
 
         // Check search input
         let matchesSearch = false;
         for (let j = 0; j < cells.length; j++) {
-            if (![0, 4, 5].includes(j) && cells[j].textContent.toLowerCase().includes(searchValue)) {
+            if (![0, 3].includes(j) && cells[j].textContent.toLowerCase().includes(searchValue)) {
                 matchesSearch = true;
                 break;
             }
         }
 
         // Display the row if it matches all filters
-        row.style.display = matchesSearch && matchesCPU && matchesGPU ? '' : 'none';
+        row.style.display = matchesSearch && matchesGPU ? '' : 'none';
     });
 }
 
 function clearFilters() {
     // Set all checkboxes to checked
-    document.querySelectorAll('[name="manufacturer"], [name="gpu-manufacturer"]').forEach(checkbox => {
+    document.querySelectorAll('[name="gpu-manufacturer"]').forEach(checkbox => {
         checkbox.checked = true;
     });
 
@@ -85,9 +74,9 @@ function clearFilters() {
 function sortTable(columnIndex) {
     if (columnIndex === 0) return; // Skip sorting for the 'No' column
 
-    const table = document.getElementById("cpuTable");
+    const table = document.getElementById("gpuTable");
     const rows = Array.from(table.rows).slice(1);
-    const isNumeric = columnIndex === 4 || columnIndex === 5; // Check if column is numeric
+    const isNumeric = columnIndex === 3; // Check if column is numeric
     const currentDirection = sortDirection[columnIndex] || 'asc'; // Default to 'asc'
     const newDirection = currentDirection === 'asc' ? 'desc' : 'asc';
     sortDirection[columnIndex] = newDirection;
@@ -119,13 +108,13 @@ function sortTable(columnIndex) {
 }
 
 function resetSortIndicators() {
-    const headers = document.querySelectorAll("#cpuTable th");
+    const headers = document.querySelectorAll("#gpuTable th");
     headers.forEach(header => header.classList.remove("sorted-asc", "sorted-desc"));
 }
 
 function downloadCSV() {
-    const rows = document.querySelectorAll('#cpuTable tbody tr');
-    let csvContent = "No,Manufacturer,CPU Name,Model Number,Rank,Antutu Score,GPU\n";
+    const rows = document.querySelectorAll('#gpuTable tbody tr');
+    let csvContent = "No,Manufacturer,GPU Name,GFXBench Score\n";
 
     rows.forEach(row => {
         if (row.style.display !== 'none') {
@@ -138,7 +127,7 @@ function downloadCSV() {
     const link = document.createElement("a");
     const url = URL.createObjectURL(blob);
     link.setAttribute("href", url);
-    link.setAttribute("download", "filtered_cpu_table.csv");
+    link.setAttribute("download", "filtered_gpu_table.csv");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -148,7 +137,7 @@ function downloadCSV() {
 document.addEventListener('DOMContentLoaded', () => {
     preprocessNumericColumns(); 
     applyFilters(); 
-    document.querySelectorAll('[name="manufacturer"], [name="gpu-manufacturer"]').forEach(checkbox => {
+    document.querySelectorAll('[name="gpu-manufacturer"]').forEach(checkbox => {
         checkbox.addEventListener('change', applyFilters);
     });
 
@@ -157,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Copy button
 function addCopyButtons() {
-    const table = document.getElementById('cpuTable');
+    const table = document.getElementById('gpuTable');
     const rows = table.querySelectorAll('tbody tr');
 
     rows.forEach(row => {
@@ -200,10 +189,10 @@ function showCopyPopup() {
 // Search field
 document.getElementById('searchInput').addEventListener('input', function () {
     const filter = this.value.toLowerCase();
-    const table = document.getElementById('cpuTable');
+    const table = document.getElementById('gpuTable');
     const rows = table.getElementsByTagName('tr');
 
-    const excludedColumns = [0, 4, 5]; // Skip some columns
+    const excludedColumns = [0, 3]; // Skip some columns
 
     for (let i = 1; i < rows.length; i++) { 
         const cells = rows[i].getElementsByTagName('td');

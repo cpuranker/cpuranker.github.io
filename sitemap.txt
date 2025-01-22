@@ -1,2 +1,3 @@
 https://cpuranker.github.io/
+https://cpuranker.github.io/gpu.html
 https://cpuranker.github.io/html/about.html
