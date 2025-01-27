@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLCBBN41X4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-VLCBBN41X4');
 </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPU Ranker - Mobile CPU Ranking List</title>
@@ -27,8 +24,6 @@
 	
 	<link rel="stylesheet" href="/css/styles.css">
 </head>
-
-
 <header class="site-header">
     <nav class="nav-bar">
         <div class="nav-left">
@@ -49,14 +44,27 @@
         </div>
     </nav>
 </header>
-
-
-
 <body>
-    <h1 style="font-family: Arial, sans-serif;">Mobile Processors 2025: Complete Ranking List</h1>
+        <h1 style="font-family: Arial, sans-serif;">Mobile Processors 2025: Complete Ranking List</h1>
 	<p>Qualcomm, MediaTek, Samsung and Google launch new mobile processors each year. In this database you could find all popular smartphone SoC with AnTuTu and GFXBench score.</p>
-	<p>Check out the <b>mobile processors ranking for 2025</b> below:</p>
 
+<noscript>	
+	<h2><span id="Smartphone_processors_list_in_2025">Smartphone processors list in 2025 at a glance:</span></h2>
+	<ul>
+		<li>Qualcomm Snapdragon 8 Elite</li>
+		<li>Mediatek Dimensity 9400</li>
+		<li>Mediatek Dimensity 9300+</li>
+		<li>Mediatek Dimensity 9300</li>
+		<li>Qualcomm Snapdragon 8 Gen 3</li>
+		<li>Samsung Exynos 2400</li>
+		<li>Qualcomm Snapdragon 8 Gen 2</li>
+		<li>Mediatek Dimensity 9200+</li>
+		<li>Mediatek Dimensity 9200</li>
+		<li>Mediatek 8400 Ultra</li>
+	</ul>
+</noscript>
+	
+	<h2><span id="Mobile_CPU_ranking_list_in_2025">Mobile CPU ranking list in 2025:</span></h2>
 
 <table style="width: 100%; margin-bottom: 0px; border-collapse: collapse; border: none;">
 	<tr>
@@ -75,7 +83,6 @@
         </form>
     </div>
 </div>
-
 <!-- Dropdown filter for GPU Manufacturer -->
 <div class="dropdown">
     <button>Filter by GPU</button>
@@ -90,13 +97,10 @@
         </form>
     </div>
 </div>
-
 <!-- Clear Filters Button -->
 <button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
 </td>	
-
 </tr>
-
 <tr>
 <td style="width: 40%; text-align: left; padding: 0px 8px; border: none;">
 <!-- Search Field -->	
@@ -104,15 +108,76 @@
     <input type="text" id="searchInput" placeholder="Search..." style="width: 250px; padding: 8px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
 </div>
 </td>	
-
-
 <td style="width: 30%; text-align: right; padding: 0px 8px; border: none;">
     <!-- Download button -->	
     <button class="download-btn" onclick="downloadCSV()">Download CSV</button>
 </td>
 </tr>
-
 </table>
+
+<noscript>
+<table>
+    <thead>
+            <tr>
+                <th>#</th>
+                <th>CPU Name</th>
+                <th>Antutu Score</th>
+            </tr>
+        </thead>
+        <tbody>
+    <tr>
+        <td>1</td>
+        <td>Qualcomm Snapdragon 8 Elite</td>
+        <td>1709461</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>MediaTek Dimensity 9400</td>
+        <td>1701249</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>MediaTek Dimensity 9300+</td>
+        <td>1336338</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>MediaTek Dimensity 9300</td>
+        <td>1314553</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Qualcomm Snapdragon 8 Gen 3</td>
+        <td>1272265</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Samsung Exynos 2400</td>
+        <td>1068003</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Qualcomm Snapdragon 8 Gen 2</td>
+        <td>991506</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>MediaTek Dimensity 9200+</td>
+        <td>918698</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>MediaTek Dimensity 9200</td>
+        <td>883658</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>MediaTek Dimensity 8400 Ultra</td>
+        <td>882563</td>
+    </tr>
+	</tbody>
+</table>
+</noscript>
 
     <div id="table-container">
         <!-- Main table -->
@@ -124,9 +189,7 @@
     <p>CPURanker &copy; 2025</p>
     <p><a href="html/about.html" style="color: #007BFF; text-decoration: none;">About</a></p>
 	</footer>
-
 <div id="copyPopup" style="display: none; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background-color: #28a745; color: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; z-index: 1000;">Text copied!</div>
-
 <script src="js/scripts.js"></script>
 </body>
 </html>
