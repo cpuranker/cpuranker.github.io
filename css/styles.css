@@ -165,3 +165,14 @@ html, body {
 #update-info a:hover {
     text-decoration: underline;
 }
+
+/* Links inside CPU table only */
+#table-container a {
+    color: #0b3d91;       /* тёмно-синий */
+    text-decoration: none;
+    font-weight: 500;     /* чуть выразительнее */
+}
+
+#table-container a:hover {
+    text-decoration: underline;
+}
