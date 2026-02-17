@@ -74,7 +74,7 @@ html, body {
 
 
 
-		table { border-collapse: collapse; width: auto; table-layout: auto;}
+		table { border-collapse: collapse; width: auto; table-layout: auto;  margin: 0 auto;}
         th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
         th { cursor: pointer; background-color: #f4f4f4; position: relative; }
         th span.sort-indicator {
