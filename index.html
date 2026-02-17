@@ -87,58 +87,58 @@ based on performance, gaming results and efficiency.
 </ol>
 
 	
-	<h2><span id="Mobile_CPU_ranking_list_in_2026">Mobile CPU ranking list in 2026:</span></h2>
+	<h2><span id="Mobile_CPU_ranking_list_in_2026">Mobile CPU ranking list in 2026</span></h2>
 
-<table style="width: 100%; margin-bottom: 0px; border-collapse: collapse; border: none;">
-	<tr>
+
     <!-- Dropdown filter for CPU Manufacturer -->
-<td style="width: 40%; text-align: left; padding: 0px 8px; border: none;">	
-<div class="dropdown">
-    <button>Filter by CPU</button>
-    <div class="dropdown-content">
-        <form id="cpu-filter-form">
-            <label><input type="checkbox" name="manufacturer" value="Qualcomm" checked> Qualcomm</label>
-            <label><input type="checkbox" name="manufacturer" value="MediaTek" checked> MediaTek</label>
-            <label><input type="checkbox" name="manufacturer" value="Samsung" checked> Samsung</label>
-			<label><input type="checkbox" name="manufacturer" value="Google" checked> Google</label>
-            <label><input type="checkbox" name="manufacturer" value="HiSilicon" checked> HiSilicon</label>
-            <label><input type="checkbox" name="manufacturer" value="Unisoc" checked> Unisoc</label>
-        </form>
-    </div>
-</div>
-<!-- Dropdown filter for GPU Manufacturer -->
-<div class="dropdown">
-    <button>Filter by GPU</button>
-    <div class="dropdown-content">
-        <form id="gpu-filter-form">
-            <label><input type="checkbox" name="gpu-manufacturer" value="Adreno" checked> Adreno</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="Mali" checked> Mali</label>
-			<label><input type="checkbox" name="gpu-manufacturer" value="Immortalis" checked> Immortalis</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="Xclipse" checked> Xclipse</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="PowerVR" checked> PowerVR</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="Maleoon" checked> Maleoon</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="IMG" checked> IMG</label>
-        </form>
-    </div>
-</div>
-<!-- Clear Filters Button -->
-<button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
-</td>	
-</tr>
-<tr>
-<td style="width: 40%; text-align: left; padding: 0px 8px; border: none;">
-<!-- Search Field -->	
-<div style="margin-bottom: 0px; text-align: left;">
-    <input type="text" id="searchInput" placeholder="Search..." style="width: 250px; padding: 8px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
-</div>
-</td>	
-<td style="width: 30%; text-align: right; padding: 0px 8px; border: none;">
-    <!-- Download button -->	
-    <button class="download-btn" onclick="downloadCSV()">Download CSV</button>
-</td>
-</tr>
-</table>
+<div class="controls-wrapper">
+    <div class="controls-left">
+        <div class="dropdown">
+            <button>Filter by CPU</button>
+            <div class="dropdown-content">
+                <form id="cpu-filter-form">
+                    <label><input type="checkbox" name="manufacturer" value="Qualcomm" checked> Qualcomm</label>
+                    <label><input type="checkbox" name="manufacturer" value="MediaTek" checked> MediaTek</label>
+                    <label><input type="checkbox" name="manufacturer" value="Samsung" checked> Samsung</label>
+        			<label><input type="checkbox" name="manufacturer" value="Google" checked> Google</label>
+                    <label><input type="checkbox" name="manufacturer" value="HiSilicon" checked> HiSilicon</label>
+                    <label><input type="checkbox" name="manufacturer" value="Unisoc" checked> Unisoc</label>
+                </form>
+            </div>
+        </div>
+        <!-- Dropdown filter for GPU Manufacturer -->
+        <div class="dropdown">
+            <button>Filter by GPU</button>
+            <div class="dropdown-content">
+                <form id="gpu-filter-form">
+                    <label><input type="checkbox" name="gpu-manufacturer" value="Adreno" checked> Adreno</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="Mali" checked> Mali</label>
+        			<label><input type="checkbox" name="gpu-manufacturer" value="Immortalis" checked> Immortalis</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="Xclipse" checked> Xclipse</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="PowerVR" checked> PowerVR</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="Maleoon" checked> Maleoon</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="IMG" checked> IMG</label>
+                </form>
+            </div>
+        </div>
+        <!-- Clear Filters Button -->
+        <button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
+        
 
+
+        <!-- Search Field -->	
+        <div style="margin-bottom: 0px; text-align: left;">
+            <input type="text" id="searchInput" placeholder="Search..." style="width: 250px; padding: 8px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+        </div>
+    </div>
+
+
+    <div class="controls-right">
+
+        <!-- Download button -->	
+        <button class="download-btn" onclick="downloadCSV()">Download CSV</button>
+    </div>
+</div>
 
     <div id="table-container" style="min-height: 1600px;">
         <!-- Main table -->
