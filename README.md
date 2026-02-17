@@ -39,6 +39,6 @@ What started as a Google Sheet has now evolved into a simple HTML/JS page where 
 - [ ] Automate the process of fetching new CPUs and GPUs to keep the database up-to-date
 
 ## About the Author
-Hi, I'm Aleksandr Kolesnikov - QA Analyst in Game Development with over 9 years of experience.  
+Hi, I'm Aleksandr Kolesnikov - QA Analyst in Game Development with over 10 years of experience.  
 Contact me on [LinkedIn](https://www.linkedin.com/in/askarter/)
 
