@@ -73,48 +73,40 @@
 </noscript>
 
 
-<table style="width: 100%; margin-bottom: 0px; border-collapse: collapse; border: none;">
-	<tr>
-    <!-- Dropdown filter for CPU Manufacturer -->
-<td style="width: 40%; text-align: left; padding: 0px 8px; border: none;">	
+<div class="controls-wrapper">
+    <div class="controls-left">
 
-<!-- Dropdown filter for GPU Manufacturer -->
-<div class="dropdown">
-    <button>Filter by GPU</button>
-    <div class="dropdown-content">
-        <form id="gpu-filter-form">
-            <label><input type="checkbox" name="gpu-manufacturer" value="Adreno" checked> Adreno</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="Mali" checked> Mali</label>
-			<label><input type="checkbox" name="gpu-manufacturer" value="Immortalis" checked> Immortalis</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="Xclipse" checked> Xclipse</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="PowerVR" checked> PowerVR</label>
-            <label><input type="checkbox" name="gpu-manufacturer" value="Maleoon" checked> Maleoon</label>
-        </form>
+        <!-- Dropdown filter for GPU Manufacturer -->
+        <div class="dropdown">
+            <button>Filter by GPU</button>
+            <div class="dropdown-content">
+                <form id="gpu-filter-form">
+                    <label><input type="checkbox" name="gpu-manufacturer" value="Adreno" checked> Adreno</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="Mali" checked> Mali</label>
+        			<label><input type="checkbox" name="gpu-manufacturer" value="Immortalis" checked> Immortalis</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="Xclipse" checked> Xclipse</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="PowerVR" checked> PowerVR</label>
+                    <label><input type="checkbox" name="gpu-manufacturer" value="Maleoon" checked> Maleoon</label>
+                </form>
+            </div>
+        </div>
+
+        <!-- Clear Filters Button -->
+        <button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
+
+
+        <!-- Search Field -->	
+        <div style="margin-bottom: 0px; text-align: left;">
+            <input type="text" id="searchInput" placeholder="Search..." style="width: 250px; padding: 8px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+        </div>
+    
+
+    <div class="controls-right">
+        <!-- Download button -->	
+        <button class="download-btn" onclick="downloadCSV()">Download CSV</button>
     </div>
+
 </div>
-
-<!-- Clear Filters Button -->
-<button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
-</td>	
-
-</tr>
-
-<tr>
-<td style="width: 40%; text-align: left; padding: 0px 8px; border: none;">
-<!-- Search Field -->	
-<div style="margin-bottom: 0px; text-align: left;">
-    <input type="text" id="searchInput" placeholder="Search..." style="width: 250px; padding: 8px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
-</div>
-</td>	
-
-
-<td style="width: 30%; text-align: right; padding: 0px 8px; border: none;">
-    <!-- Download button -->	
-    <button class="download-btn" onclick="downloadCSV()">Download CSV</button>
-</td>
-</tr>
-
-</table>
 
     <div id="table-container">
         <!-- Main table -->
