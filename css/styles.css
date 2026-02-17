@@ -95,7 +95,7 @@ html, body {
         th.sorted-desc span.sort-indicator {
             border-top-color: black; /* Black triangle */
         }
-        .dropdown { position: relative; display: inline-block; margin-bottom: 20px; }
+        .dropdown { position: relative; display: inline-block; }
         .dropdown-content { 
             display: none; 
             position: absolute; 
