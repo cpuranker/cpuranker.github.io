@@ -202,3 +202,7 @@ html, body {
     border-radius: 8px;
     border: 1px solid #ccc;
 }
+
+.ranking-title {
+    text-align: center;
+}
