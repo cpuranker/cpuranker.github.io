@@ -176,3 +176,29 @@ html, body {
 #table-container a:hover {
     text-decoration: underline;
 }
+
+
+.controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;   /* та же ширина, что и у таблицы */
+    margin: 0 auto 20px auto;
+    flex-wrap: wrap;     /* чтобы не ломалось на мобилке */
+    gap: 10px;
+}
+
+.controls-left,
+.controls-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchInput {
+    width: 250px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
