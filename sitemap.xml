@@ -16,19 +16,19 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
-	    <loc>https://cpuranker.github.io/html/chipset/snapdragon-8-elite-gen-4.html</loc>
+	    <loc>https://cpuranker.github.io/html/chipset/qualcomm-snapdragon-8-elite-gen-4.html</loc>
 	    <lastmod>2026-02-17</lastmod>
 	    <priority>0.9</priority>
 	</url>
 
 	<url>
-	    <loc>https://cpuranker.github.io/html/chipset/exynos-2500.html</loc>
+	    <loc>https://cpuranker.github.io/html/chipset/samsung-exynos-2500.html</loc>
 	    <lastmod>2026-02-17</lastmod>
 	    <priority>0.8</priority>
 	</url>
 
 	<url>
-	    <loc>https://cpuranker.github.io/html/chipset/dimensity-9400.html</loc>
+	    <loc>https://cpuranker.github.io/html/chipset/mediatek-dimensity-9400.html</loc>
 	    <lastmod>2026-02-17</lastmod>
 	    <priority>0.9</priority>
 	</url>
@@ -40,8 +40,32 @@
 	</url>
 
 	<url>
-	    <loc>https://cpuranker.github.io/html/chipset/snapdragon-8-gen-5.html</loc>
+	    <loc>https://cpuranker.github.io/html/chipset/qualcomm-snapdragon-8-elite-gen-5.html</loc>
 	    <lastmod>2026-02-17</lastmod>
+	    <priority>0.9</priority>
+	</url>
+
+	<url>
+	    <loc>https://cpuranker.github.io/html/chipset/qualcomm-snapdragon-8-gen-5.html</loc>
+	    <lastmod>2026-02-17</lastmod>
+	    <priority>0.9</priority>
+	</url>
+
+	<url>
+	    <loc>https://cpuranker.github.io/html/reviews/top-5-fastest-smartphones-2026.html</loc>
+	    <lastmod>2026-02-18</lastmod>
+	    <priority>0.9</priority>
+	</url>
+
+	<url>
+	    <loc>https://cpuranker.github.io/html/chipset/mediatek-dimensity-8400-ultra.html</loc>
+	    <lastmod>2026-02-18</lastmod>
+	    <priority>0.9</priority>
+	</url>
+
+	<url>
+	    <loc>https://cpuranker.github.io/html/chipset/mediatek-dimensity-9500.html</loc>
+	    <lastmod>2026-02-18</lastmod>
 	    <priority>0.9</priority>
 	</url>
 </urlset>
