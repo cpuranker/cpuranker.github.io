@@ -81,3 +81,14 @@
         margin: 30px auto;
     }
 }
+
+.badge-editor {
+    background: linear-gradient(90deg, #1e73e8, #0d5bd3);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
