@@ -39,6 +39,24 @@
     margin-top: 0;
 }
 
+/* 🥇 Gold */
+.phone-card.gold {
+    background-color: #f9f6e8;
+    border-color: #e6dcc2;
+}
+
+/* 🥈 Silver */
+.phone-card.silver {
+    background-color: #f2f3f5;
+    border-color: #dcdfe4;
+}
+
+/* 🥉 Bronze */
+.phone-card.bronze {
+    background-color: #f6eee6;
+    border-color: #e2d3c4;
+}
+
 /* ===== Spec Grid ===== */
 
 .spec-grid {
