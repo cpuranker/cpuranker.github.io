@@ -1,0 +1,83 @@
+/* ===== Review Layout ===== */
+
+.review-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ===== Quick Navigation ===== */
+
+.quick-nav {
+    background: #f8f9fc;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 40px;
+}
+
+.quick-nav ul {
+    padding-left: 20px;
+}
+
+/* ===== Phone Card ===== */
+
+.phone-card {
+    background: #ffffff;
+    padding: 30px 35px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phone-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.phone-card h2 {
+    margin-top: 0;
+}
+
+/* ===== Spec Grid ===== */
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 25px;
+    margin: 15px 0 20px 0;
+}
+
+/* ===== Benchmark Box ===== */
+
+.benchmark-box {
+    background: #f3f6fa;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+.benchmark-box ul {
+    margin: 8px 0 0 18px;
+}
+
+/* ===== Final Section ===== */
+
+.final-section {
+    background: #f3f6fa;
+    padding: 30px;
+    border-radius: 16px;
+    margin-top: 50px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-container {
+        margin: 30px auto;
+    }
+}
