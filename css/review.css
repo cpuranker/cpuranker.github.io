@@ -1,12 +1,57 @@
-/* ===== Review Layout ===== */
+/* ===============================
+   Base Typography & Layout
+================================ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f6f8;
+    color: #222;
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+}
 
 .review-container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 50px auto;
     padding: 0 20px;
 }
 
-/* ===== Quick Navigation ===== */
+/* Headings */
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 50px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 8px;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Links */
+
+a {
+    color: #1e73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   Quick Navigation
+================================ */
 
 .quick-nav {
     background: #f8f9fc;
@@ -17,9 +62,12 @@
 
 .quick-nav ul {
     padding-left: 20px;
+    margin: 0;
 }
 
-/* ===== Phone Card ===== */
+/* ===============================
+   Phone Card
+================================ */
 
 .phone-card {
     background: #ffffff;
@@ -27,37 +75,34 @@
     margin-bottom: 40px;
     border-radius: 16px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease;
 }
 
 .phone-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.07);
 }
 
 .phone-card h2 {
     margin-top: 0;
 }
 
-/* 🥇 Gold */
+/* Ranking Variants (subtle tones) */
+
 .phone-card.gold {
-    background-color: #f9f6e8;
-    border-color: #e6dcc2;
+    background-color: #fbfaf4;
 }
 
-/* 🥈 Silver */
 .phone-card.silver {
-    background-color: #f2f3f5;
-    border-color: #dcdfe4;
+    background-color: #f7f8fa;
 }
 
-/* 🥉 Bronze */
 .phone-card.bronze {
-    background-color: #f6eee6;
-    border-color: #e2d3c4;
+    background-color: #faf7f4;
 }
 
-/* ===== Spec Grid ===== */
+/* ===============================
+   Spec Grid
+================================ */
 
 .spec-grid {
     display: grid;
@@ -66,7 +111,9 @@
     margin: 15px 0 20px 0;
 }
 
-/* ===== Benchmark Box ===== */
+/* ===============================
+   Benchmark Box
+================================ */
 
 .benchmark-box {
     background: #f3f6fa;
@@ -79,7 +126,9 @@
     margin: 8px 0 0 18px;
 }
 
-/* ===== Final Section ===== */
+/* ===============================
+   Final Summary Section
+================================ */
 
 .final-section {
     background: #f3f6fa;
@@ -88,25 +137,65 @@
     margin-top: 50px;
 }
 
-/* ===== Responsive ===== */
+/* ===============================
+   Comparison Table
+================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+/* ===============================
+   Editor Badge
+================================ */
+
+.badge-editor {
+    background: #1e73e8;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 16px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* ===============================
+   Responsive
+================================ */
 
 @media (max-width: 768px) {
-    .spec-grid {
-        grid-template-columns: 1fr;
-    }
 
     .review-container {
         margin: 30px auto;
     }
-}
 
-.badge-editor {
-    background: linear-gradient(90deg, #1e73e8, #0d5bd3);
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 20px;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
 }
